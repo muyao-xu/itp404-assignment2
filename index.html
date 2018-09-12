@@ -14,18 +14,17 @@
 
 <div class="loader" style="display: none">Loading...</div>
 
-
 <template id="post-template">
 	{{#each posts}}
 	<div class="post">
 		<h3><a href="{{data.url}}">{{data.title}}</a><br /></h3>
+		score: {{data.score}}<br />
 		subscribers: {{formate-value data.subreddit_subscribers}} <br />
 		{{#if data.num_comments}}
-			<p>comments: {{formate-value data.num_comments}} </p>
+			comments: {{formate-value data.num_comments}} 
 		{{else}}
-			<p>No comments</p>
+			No comments
 		{{/if}}
-		<!-- score: {{data.score}}, author: {{data.author}} -->
 	</div>
 	{{/each}}
 </template>
@@ -35,27 +34,3 @@
 <script src="main.js"></script>
 </body>
 </html>
-
-
-
-
-<!-- <template id="repos-template">
-	{{#each repos}}
-	<div class="repo">
-		<h3>{{name}}</h3>	
-		<p>Created At: {{relative-date created_at}}</p>
-		<p>Last Updated: {{relative-date updated_at}}</p>
-		{{#if description}}
-			<p>{{description}}</p>
-		{{else}}
-			<p>No description</p>	
-		{{/if}}
-
-		{{#if stargazers_count}}
-			Stars: {{stargazers_count}}
-		{{else}}
-			No stars
-		{{/if}}
-	</div>
-	{{/each}}
-</template> -->
